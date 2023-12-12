@@ -5,7 +5,7 @@ export const PROJECT_SOURCE = [
     desc: `Bluesea Investment Limited is a contruction company focused in
     engineering Projects, procurement Services, and construction work.`,
     tools: `Tools used: ReactJs, Bootsrap, Saas`,
-    github: '#',
+    github: 'https://github.com/chimobi-justice/bluesea',
     website: 'https://bluesea-pi.vercel.app/',
   },
   {
@@ -23,7 +23,7 @@ export const PROJECT_SOURCE = [
     title: 'stack dashboard (Work In Progress)',
     desc: `An all-in-one cooperative web app that minimize the
     risk and help users easily save and restore deleted contacts`,
-    tools: `Tools used: ReactJs, Typescript, Ant Design, Styled-component`,
+    tools: `Tools used: ReactJs, Typescript, Ant Design, Styled-component, Firebase`,
     github: 'https://github.com/chimobi-justice/stack-dashboard',
     website: 'https://stack-dashboard-wheat.vercel.app/',
   },

@@ -39,6 +39,13 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         borderRadius: '3px',
       },
+
+      '& .error': {
+        background: 'red',
+        padding: '1em',
+        textAlign: 'center',
+        borderRadius: '3px',
+      },
       '& .MuiButton-contained': {
         padding: '1em',
         textTransform: 'inherit',
