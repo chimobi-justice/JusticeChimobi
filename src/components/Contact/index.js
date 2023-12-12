@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import Box from '@mui/material/Box';
@@ -12,6 +12,8 @@ import { useStyles } from './styled.contact';
 
 import { Button } from '../Button';
 
+import emailjs from '@emailjs/browser';
+
 const validationSchema = yup.object().shape({
   fullname: yup.string().required('Required*'),
   email: yup
@@ -24,41 +26,28 @@ const validationSchema = yup.object().shape({
 const Contact = () => {
   const classes = useStyles();
   const [info, setInfo] = useState('');
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState(true);
+
+  const formRef = useRef()
 
   const _handleSubmit = () => {
-    fetch('https://portfolio-app-contact-form.herokuapp.com/contact', {
-      credentials: 'same-origin',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    emailjs
+    .sendForm(
+      'service_lhqjdhb',
+      'template_jm6r3lc',
+      formRef.current,
+      'QsQj2knIbRDX--j2W'
+    )
+    .then(
+      (response) => {
+        setInfo('Message sent successfully we get back to you shortly');
+        setStatus(true);
       },
-      body: JSON.stringify({
-        name: fullname,
-        email,
-        message,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        const { status, response } = data;
-        if (status === 500) {
-          setInfo(response);
-          setStatus(status);
-        }
-        if (status === 400) {
-          setInfo(response);
-          setStatus(status);
-        }
-        if (status === 200) {
-          setInfo(response);
-          setStatus(status);
-          resetForm();
-        }
-      })
-      .catch(() => {
+      (err) => {
         setInfo('An error occured. Please try again later');
-      });
+        setStatus(false);
+      }
+    );
   };
 
   const formik = useFormik({
@@ -113,9 +102,9 @@ const Contact = () => {
             data-sal-delay="400"
             data-sal-easing="ease"
           >
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} ref={formRef}>
               {/* {info ? <Snackbar message={info} status={status} /> : ''} */}
-              {info ? <Box className="success">{info}</Box> : ''}
+              {info ? <Box className={ status === true ? 'success' : 'error'}>{info}</Box> : ''}
               <Box>
                 <TextField
                   type="text"
@@ -170,7 +159,7 @@ const Contact = () => {
                   fullWidth
                   size="medium"
                   type="submit"
-                  disableElevation={true}
+                  disableElevation={false}
                   disabled={!fullname || !email || !message || isSubmitting}
                 >
                   {isSubmitting ? (
