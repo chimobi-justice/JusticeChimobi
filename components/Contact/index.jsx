@@ -2,28 +2,28 @@
 
 import Link from "next/link"
 import Box from '@mui/material/Box'
-import Container from "@mui/material/Container"
 import Typography from "@mui/material/Typography"
 import { motion } from 'framer-motion'
-import { useStyles } from '@/components/Contact/styled.contact'
 import { Button } from '@/components/shared/Button'
 import useAnimate from "@/hooks/useAnimate"
+import {
+  RootContainer,
+  Wrapper
+} from '@/components/Contact/styled.contact'
 
 const Contact = () => {
-  const classes = useStyles();
-
   const { ref, controls, variants, transition } = useAnimate();
 
   return (
-    <Box component="section" id="contact" className={classes.root} ref={ref}>
-      <Container maxWidth="lg" className={classes.wrapper}
-        component={motion.div} 
-        variants={variants}
-        initial="hidden"
-        animate={controls}
-        transition={transition}
-      >
-        <Box>
+    <RootContainer id="contact" ref={ref}>
+      <Wrapper>
+        <Box
+          component={motion.div}
+          variants={variants}
+          initial="hidden"
+          animate={controls}
+          transition={transition}
+        >
           <Typography variant="body1" pb={2}>
             <span style={{ color: '#00f900' }}>03. What's next say hi 👋</span>
           </Typography>
@@ -49,8 +49,8 @@ const Contact = () => {
             </Button>
           </Link>
         </Box>
-      </Container>
-    </Box>
+      </Wrapper>
+    </RootContainer>
   )
 }
 

@@ -2,21 +2,22 @@
 
 import Image from "next/image"
 import Box from '@mui/material/Box'
-import Container from "@mui/material/Container"
 import Grid from '@mui/material/Grid'
 import Typography from "@mui/material/Typography"
-import { useStyles } from "@/components/About/styled.about"
 import { motion } from 'framer-motion'
 import useAnimate from '@/hooks/useAnimate'
+import { 
+  RootContainer, 
+  Wrapper, 
+  AboutImage 
+} from '@/components/About/styled.about'
 
 const About = () => {
-  const classes = useStyles();
-
   const { ref, controls, variants, transition } = useAnimate();
 
   return (
-    <Box component="section" className={classes.root} id="about" ref={ref}>
-      <Container maxWidth="lg" className={classes.wrapper}>
+    <RootContainer component="section" id="about" ref={ref}>
+      <Wrapper>
         <Typography variant="h4" gutterBottom
           component={motion.h4}
           variants={variants}
@@ -90,7 +91,7 @@ const About = () => {
             animate={controls}
             transition={transition}
           >
-            <Box className={classes.aboutImage}>
+            <AboutImage>
               <Image
                 src="/my-profile.png"
                 width={280}
@@ -101,11 +102,11 @@ const About = () => {
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=="
               />
-            </Box>
+            </AboutImage>
           </Grid>
         </Grid>
-      </Container>
-    </Box>
+      </Wrapper>
+    </RootContainer>
   )
 }
 

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Stack from '@mui/material/Stack'
@@ -14,13 +13,16 @@ import CloseIcon from '@mui/icons-material/Close'
 import { NAVMENU } from '@/constant/menu'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/system'
-import { useStyles } from '@/components/Navigation/styled.navigation'
+import { 
+  DrawerContainer, 
+  DrawerClose, 
+  DrawerBox 
+} from '@/components/Navigation/styled.navigation'
 
 const NavBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-  const classes = useStyles();
 
   const toggleDrawer = () => {
     setIsDrawerOpen((prevState) => !prevState);
@@ -50,21 +52,21 @@ const NavBar = () => {
 
 
           {isDrawerOpen && (
-            <Box className={classes.drawer}>
-              <Box className={classes.drawerClose}>
+            <DrawerContainer>
+              <DrawerClose>
                 <IconButton onClick={toggleDrawer}>
                   <CloseIcon fontSize="large" style={{ color: 'white' }} />
                 </IconButton>
-              </Box>
-              <Box className={classes.drawerBox}>
+              </DrawerClose>
+              <DrawerBox>
                 {NAVMENU.map((menu) => (
                   <Link key={menu.name} href={menu.path}>
                     <Typography variant="h4"><span style={{ marginRight: "2px", color: "#00f900" }}>{menu.number}</span></Typography>
                     <Typography variant="h4" pb={3}>{menu.name}</Typography>
                   </Link>
                 ))}
-              </Box>
-            </Box>
+              </DrawerBox>
+            </DrawerContainer>
           )}
         </>
         // end mobile navBar

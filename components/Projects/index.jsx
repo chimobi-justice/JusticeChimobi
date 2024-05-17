@@ -6,23 +6,24 @@ import Link from 'next/link'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LanguageIcon from '@mui/icons-material/Language'
 import { motion } from 'framer-motion'
-import { useStyles } from '@/components/Projects/styled.project'
 import { Button } from '@/components/shared/Button'
 import { PROJECT_SOURCE } from '@/constant/project'
 import useAnimate from '@/hooks/useAnimate'
+import { 
+  RootContainer, 
+  Wrapper, 
+  Content 
+} from '@/components/Projects/styled.project'
 
 const Project = () => {
-  const classes = useStyles();
-
   const { ref, controls, variants, transition } = useAnimate();
 
   return (
-    <Box className={classes.root} id="projects" ref={ref}>
-      <Container maxWidth="lg" className={classes.wrapper}>
+    <RootContainer id="projects" ref={ref}>
+      <Wrapper>
         <Typography variant="h4" gutterBottom
           component={motion.h4} 
           variants={variants}
@@ -52,10 +53,6 @@ const Project = () => {
                 initial="hidden"
                 animate={controls}
                 transition={transition}
-
-                data-sal="slide-up"
-                data-sal-delay="200"
-                data-sal-easing="ease"
               >
                 <Box className="container">
                   <Image
@@ -69,7 +66,7 @@ const Project = () => {
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=="
                     alt="project preview"
                   />
-                  <Box className={classes.content}>
+                  <Content>
                     <Typography variant="subtitle2">
                       <strong>{project.title}</strong>
                     </Typography>
@@ -120,14 +117,14 @@ const Project = () => {
                         </Link>
                       </Grid>
                     </Grid>
-                  </Box>
+                  </Content>
                 </Box>
               </Grid>
             </Fragment>
           ))}
         </Grid>
-      </Container>
-    </Box>
+      </Wrapper>
+    </RootContainer>
   )
 };
 
