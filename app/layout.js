@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Justice Chimobi",
-  description: `Justice, a multi-disciplinary Software Engineer based in Lagos, 
+  description: `Justice, is a multi-disciplinary Software Engineer based in Lagos, 
   Nigeria, is passionate about creating web and mobile applications. By day, he 
   delves into various technical challenges, while at night, he transforms into a 
   technical writer.
