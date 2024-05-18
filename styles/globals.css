@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary-base-color: #00f900
+  }
+  
+  html {
+    scroll-behavior: smooth
+  }
+  
+  body {
+    background: #0a1931;
+    color: lightgray;
+  }
+  
+  a {
+    text-decoration: none;
+    color: lightgray;
+  }
