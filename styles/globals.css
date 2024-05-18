@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    --primary-base-color: #00f900
+  }
   
   html {
     scroll-behavior: smooth

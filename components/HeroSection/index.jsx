@@ -28,9 +28,10 @@ const HeroSection = () => {
                 initial="hidden"
                 animate={controls}
                 transition={transition}
+                whileInView={{ opacity: 1 }}
               >
                 <Typography variant="h6"
-                  style={{ color: '#00f900' }}
+                  style={{ color: 'var(--primary-base-color)' }}
                 >
                   👋 Hi, my name is
                 </Typography>
@@ -39,13 +40,13 @@ const HeroSection = () => {
                   Justice Chimobi.
                 </Typography>
                 <Typography variant="h2"
-                >I
-                  build things for the web.
+                >
+                  I build things for the web.
                 </Typography>
                 <ContentWrapper>
                   <Typography variant="subtitle1">
                     I'm a software engineer specializing in building
-                    (and occationally designing) exceptional digital
+                    and occationally designing exceptional digital
                     experience. Currently, I'm focused on building
                     accessible and  human centered pruducts
                   </Typography>

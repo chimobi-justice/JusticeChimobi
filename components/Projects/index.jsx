@@ -30,8 +30,9 @@ const Project = () => {
           initial="hidden"
           animate={controls}
           transition={transition}
+          whileInView={{ opacity: 1 }}
         >
-          <span style={{ color: '#00f900' }}>02.</span> Some Things I’ve Built
+          <span style={{ color: 'var(--primary-base-color)' }}>02.</span> Some Things I’ve Built
         </Typography>
 
         <Grid
@@ -53,6 +54,7 @@ const Project = () => {
                 initial="hidden"
                 animate={controls}
                 transition={transition}
+                whileInView={{ opacity: 1 }}
               >
                 <Box className="container">
                   <Image
@@ -111,7 +113,7 @@ const Project = () => {
                             type="button"
                             disableElevation={true}
                           >
-                            <GitHubIcon fontSize="small" /> &nbsp;GitHub
+                            <GitHubIcon fontSize="small" /> &nbsp; GitHub
                           </Button>
                         </Link>
                       </Grid>

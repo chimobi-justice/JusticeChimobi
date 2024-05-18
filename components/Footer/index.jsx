@@ -20,13 +20,14 @@ const Footer = () => {
       initial="hidden"
       animate={controls}
       transition={transition}
+      whileInView={{ opacity: 1 }}
     >
       <Typography variant="body2" p={2}>
-        &copy; {currentYear} - Developed and built by {' '}
+        &copy; {currentYear} - Developed and built by&nbsp;
         <Link href="https://github.com/chimobi-justice"
           target="_blank"
           rel="noreferrer"
-          style={{ color: '#00f900' }}
+          style={{ color: 'var(--primary-base-color)' }}
         >
           Justice Chimobi
         </Link>
@@ -47,11 +48,11 @@ const Footer = () => {
       </Box>
 
       <Typography variant="body2" p={2}>
-        Credit By {' '}
+        Credit By&nbsp;
         <Link href="https://github.com/bchiang7"
           target="_blank"
           rel="noreferrer"
-          style={{ color: '#00f900' }}
+          style={{ color: 'var(--primary-base-color)' }}
         >
           Brittany Chiang.
         </Link>

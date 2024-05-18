@@ -45,7 +45,7 @@ const NavBar = () => {
             </Typography>
             <Stack direction="row" justifyContent="center" alignItems="end" spacing={3}>
               <IconButton onClick={toggleDrawer}>
-                <MenuIcon fontSize="large" style={{ color: '#00f900' }} />
+                <MenuIcon fontSize="large" style={{ color: 'var(--primary-base-color)' }} />
               </IconButton>
             </Stack>
           </Toolbar>
@@ -61,7 +61,7 @@ const NavBar = () => {
               <DrawerBox>
                 {NAVMENU.map((menu) => (
                   <Link key={menu.name} href={menu.path}>
-                    <Typography variant="h4"><span style={{ marginRight: "2px", color: "#00f900" }}>{menu.number}</span></Typography>
+                    <Typography variant="h4"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.number}</span></Typography>
                     <Typography variant="h4" pb={3}>{menu.name}</Typography>
                   </Link>
                 ))}
@@ -86,7 +86,7 @@ const NavBar = () => {
           <Stack direction="row" justifyContent="center" alignItems="end" spacing={3}>
             {NAVMENU.map((menu) => (
               <Link key={menu.name} href={menu.path}>
-                <Typography variant="subtitle2"><span style={{ marginRight: "2px", color: "#00f900" }}>{menu.number}</span> {menu.name}</Typography>
+                <Typography variant="subtitle2"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.number}</span> {menu.name}</Typography>
               </Link>
             ))}
           </Stack>

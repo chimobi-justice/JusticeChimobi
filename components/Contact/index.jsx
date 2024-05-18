@@ -23,19 +23,19 @@ const Contact = () => {
           initial="hidden"
           animate={controls}
           transition={transition}
+          whileInView={{ opacity: 1 }}
         >
           <Typography variant="body1" pb={2}>
-            <span style={{ color: '#00f900' }}>03. What's next say hi 👋</span>
+            <span style={{ color: 'var(--primary-base-color)' }}>03. What's next say hi👋</span>
           </Typography>
           <Typography variant="h2">
             Get In Touch
           </Typography>
           <Typography variant="subtitle1" mb={5} mt={5}>
-            While I'm currently content with my current endeavors, I'm always
-            open to connecting and exploring new opportunities. Whether you have
-            a question, an exciting project to discuss, or simply want to say hello,
-            {' '} <span style={{ color: '#00f900' }}>(chimobi.justice@gmail.com)</span> {' '}
-            my inbox is always ready and waiting. Feel free to reach out, and I'll do
+            While I'm currently content with my current endeavors, I'm always&nbsp;
+            open to connecting and exploring new opportunities. Whether you have&nbsp;
+            a question, an exciting project to discuss, or simply want to say hello, <span style={{ color: 'var(--primary-base-color)' }}>(chimobi.justice@gmail.com)</span>&nbsp;
+            my inbox is always ready and waiting. Feel free to reach out, and I'll do&nbsp;
             my best to respond promptly. Looking forward to hearing from you!
           </Typography>
           <Link href="mailto:chimobi.justice@gmail.com">
