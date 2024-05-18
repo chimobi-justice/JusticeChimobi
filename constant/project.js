@@ -1,6 +1,6 @@
 export const PROJECT_SOURCE = [
     {
-      dest: '/Recruit.png',
+      dest: '/recruit.png',
       title: 'Recruit',
       desc: `Recruit is a job application which give users all they 
       need from the job market`,
