@@ -68,7 +68,7 @@ const Project = () => {
                     alt="project preview"
                   />
                   <Content>
-                    <Typography variant="subtitle2">
+                    <Typography variant="h6" pt={1} pb={1}>
                       <strong>{project.title}</strong>
                     </Typography>
                     <Typography variant="subtitle1">{project.desc}</Typography>

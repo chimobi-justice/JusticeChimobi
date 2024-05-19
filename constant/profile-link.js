@@ -6,18 +6,18 @@ import XIcon from '@mui/icons-material/X';
 export const PROFILE_LINK = [
   {
     link: 'https://github.com/chimobi-justice',
-    icon: <GitHubIcon fontSize="large" />
+    icon: <GitHubIcon fontSize="large" color="success" />
   },
   {
     link: 'https://www.linkedin.com/in/justice-chimobi',
-    icon: <LinkedIn fontSize="large" />
+    icon: <LinkedIn fontSize="large" color="success" />
   },
   {
     link: 'https://twitter.com/chimobijustice_',
-    icon: <XIcon fontSize="large" />
+    icon: <XIcon fontSize="large" color="success" />
   },
   {
     link: 'http://www.youtube.com/@chimobijustice',
-    icon: <YouTube fontSize="large" />
+    icon: <YouTube fontSize="large" color="success" />
   }
 ];

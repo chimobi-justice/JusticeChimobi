@@ -14,6 +14,13 @@ export const Wrapper = styled('div')(({ theme }) => ({
   margin: '0px auto',
   textAlign: 'center',
 
+  [theme.breakpoints.down('lg')]: {
+    width: '90%',
+  },
+  [theme.breakpoints.down('md')]: {
+    width: '80%',
+  },
+
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },
