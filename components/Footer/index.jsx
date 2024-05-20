@@ -46,17 +46,6 @@ const Footer = () => {
           </Box>
         ))}
       </Box>
-
-      <Typography variant="body2" p={2}>
-        Credit By&nbsp;
-        <Link href="https://github.com/bchiang7"
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: 'var(--primary-base-color)' }}
-        >
-          Brittany Chiang.
-        </Link>
-      </Typography>
     </Box>
   )
 }

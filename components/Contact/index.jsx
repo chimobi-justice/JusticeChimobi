@@ -24,6 +24,7 @@ const Contact = () => {
           animate={controls}
           transition={transition}
           whileInView={{ opacity: 1 }}
+          p={2}
         >
           <Typography variant="body1" pb={2}>
             <span style={{ color: 'var(--primary-base-color)' }}>03. What's next say hi👋</span>
@@ -34,7 +35,7 @@ const Contact = () => {
           <Typography variant="subtitle1" mb={5} mt={5}>
             While I'm currently content with my current endeavors, I'm always&nbsp;
             open to connecting and exploring new opportunities. Whether you have&nbsp;
-            a question, an exciting project to discuss, or simply want to say hello, <span style={{ color: 'var(--primary-base-color)' }}>(chimobi.justice@gmail.com)</span>&nbsp;
+            a question, an exciting project to discuss, or simply want to say hello&nbsp;
             my inbox is always ready and waiting. Feel free to reach out, and I'll do&nbsp;
             my best to respond promptly. Looking forward to hearing from you!
           </Typography>
