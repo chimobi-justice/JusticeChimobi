@@ -43,7 +43,7 @@ const About = () => {
                 based in Lagos, Nigeria, is passionate about&nbsp;
                 creating web and mobile applications. By day, he&nbsp;
                 delves into various <span style={{ color: 'var(--primary-base-color)' }}>technical challenges</span>, while&nbsp;
-                at night, he transforms into a technical writer.
+                at night, he transforms into a technical writer, and also share's his knowledge on <span style={{ color: 'var(--primary-base-color)' }}>YouTube.</span>
               </Typography>
               <Typography variant="subtitle1">
                 Justice is deeply involved in the tech community and&nbsp;
@@ -69,12 +69,14 @@ const About = () => {
                   <Typography variant="subtitle2">Nextjs</Typography>
                   <Typography variant="subtitle2">Ant Design</Typography>
                   <Typography variant="subtitle2">MUI</Typography>
-                  <Typography variant="subtitle2">styled-component</Typography>
+                  <Typography variant="subtitle2">Chakra UI</Typography>
+                  <Typography variant="subtitle2">React Query</Typography>
                 </Grid>
 
                 <Grid item md={4}>
-                  <Typography variant="subtitle2">React Query</Typography>
+                  <Typography variant="subtitle2">Redux</Typography>
                   <Typography variant="subtitle2">TailwindCss</Typography>
+                  <Typography variant="subtitle2">styled-component</Typography>
                   <Typography variant="subtitle2">Laravel</Typography>
                   <Typography variant="subtitle2">PHP</Typography>
                   <Typography variant="subtitle2">My SQL</Typography>
@@ -93,7 +95,7 @@ const About = () => {
           >
             <AboutImage>
               <Image
-                src="/my-profile.png"
+                src="/about-img.jpg"
                 width={280}
                 height={240}
                 alt="my photo"
