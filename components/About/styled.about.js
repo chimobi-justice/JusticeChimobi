@@ -17,15 +17,13 @@ export const AboutImage = styled('div')(({ theme }) => ({
   position: 'relative',
   display: 'block',
   overflow: 'hidden',
-  width: 280,
-  height: 240,
+  width: 380,
+  height: 450,
   [theme.breakpoints.down('md')]: {
-    width: '75%',
-    height: 'auto',
+    height: 400,
   },
   [theme.breakpoints.down('sm')]: {
     width: '100%',
-    height: 'auto',
   },
   borderRadius: '8px',
   '&:hover img': {
