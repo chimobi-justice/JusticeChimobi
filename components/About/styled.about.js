@@ -20,7 +20,7 @@ export const AboutImage = styled('div')(({ theme }) => ({
   width: 380,
   height: 450,
   [theme.breakpoints.down('md')]: {
-    height: 310,
+    height: 400,
   },
   [theme.breakpoints.down('sm')]: {
     width: '100%',
