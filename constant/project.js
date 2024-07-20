@@ -28,16 +28,6 @@ export const PROJECT_SOURCE = [
       website: 'https://recruit-eight-xi.vercel.app/',
     },
     {
-      dest: '/estudy.PNG',
-      title: 'Estudy (Work In Progress)',
-      desc: `An eLearning platform to choose learning courses from
-      different categories in TECH also finding support from mentors
-      and peers`,
-      tools: `Tools used: ReactJs, React-Query, TailwindCss, Styled-component, Ant-Design`,
-      github: 'https://github.com/chimobi-justice/estudy-web-frontend',
-      website: 'https://estudy-self.vercel.app/',
-    },
-    {
       dest: '/bluesea.png',
       title: 'Bluesea Investment Limited',
       desc: `Bluesea Investment Limited is a contruction company focused in
