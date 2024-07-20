@@ -1,5 +1,24 @@
 export const PROJECT_SOURCE = [
     {
+      dest: '/learn-hub.png',
+      title: 'Learn Hub (Work In Progress)',
+      desc: `A portal for problem solving, knowledge sharing and 
+      community builders, join others for sharing knowledge`,
+      tools: `Tools used: ReactJs, TypeScript, React-Query, Chakra UI`,
+      github: 'https://github.com/chimobi-justice/learn-hub',
+      website: 'https://learn-hub-rosy.vercel.app/',
+    },
+    {
+      dest: '/estudy.PNG',
+      title: 'Estudy (Work In Progress)',
+      desc: `An eLearning platform to choose learning courses from
+      different categories in TECH also finding support from mentors
+      and peers`,
+      tools: `Tools used: ReactJs, React-Query, TailwindCss, Styled-component, Ant-Design`,
+      github: 'https://github.com/chimobi-justice/estudy-web-frontend',
+      website: 'https://estudy-self.vercel.app/',
+    },
+    {
       dest: '/recruit.png',
       title: 'Recruit',
       desc: `Recruit is a job application which give users all they 
