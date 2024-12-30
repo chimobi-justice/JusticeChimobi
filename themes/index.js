@@ -30,7 +30,6 @@ const customTheme = {
   },
   typography: {
     subtitle1: {
-      fontFamily: 'Comfortaa',
       marginBottom: '1em',
       lineHeight: '1.8em',
       wordSpacing: '.1em',
@@ -39,7 +38,6 @@ const customTheme = {
       color: 'lightgray'
     },
     subtitle2: {
-      fontFamily: 'Comfortaa',
       marginBottom: '1em',
       lineHeight: '1.6em',
       wordSpacing: '.1em',
