@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Typography from "@mui/material/Typography"
@@ -67,9 +67,9 @@ const About = () => {
                   <Typography variant="subtitle2">Reactjs</Typography>
                   <Typography variant="subtitle2">TypeScript</Typography>
                   <Typography variant="subtitle2">Nextjs</Typography>
-                  <Typography variant="subtitle2">Ant Design</Typography>
-                  <Typography variant="subtitle2">MUI</Typography>
                   <Typography variant="subtitle2">Chakra UI</Typography>
+                  <Typography variant="subtitle2">MUI</Typography>
+                  <Typography variant="subtitle2">Ant Design</Typography>
                   <Typography variant="subtitle2">React Query</Typography>
                 </Grid>
 
