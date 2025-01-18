@@ -2,6 +2,7 @@ import { styled } from '@mui/system';
 
 export const RootContainer = styled('section')(({ theme }) => ({
   padding: '4em 1px',
+  height: 'auto',
   [theme.breakpoints.down('sm')]: {
     padding: '3em 0px',
   },
@@ -9,7 +10,7 @@ export const RootContainer = styled('section')(({ theme }) => ({
 
 export const Wrapper = styled('div')(({ theme }) => ({
   width: '80%',
-  margin: '0px auto',
+  margin: '2rem auto',
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },

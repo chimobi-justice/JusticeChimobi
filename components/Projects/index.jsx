@@ -24,15 +24,17 @@ const Project = () => {
   return (
     <RootContainer id="projects" ref={ref}>
       <Wrapper>
-        <Typography variant="h4" gutterBottom
-          component={motion.h4} 
+        <Typography 
+          variant="h2" 
+          gutterBottom
+          component={motion.h2} 
           variants={variants}
           initial="hidden"
           animate={controls}
           transition={transition}
           whileInView={{ opacity: 1 }}
         >
-          <span style={{ color: 'var(--primary-base-color)' }}>02.</span> Some Things I’ve Built
+          Featured Projects
         </Typography>
 
         <Grid

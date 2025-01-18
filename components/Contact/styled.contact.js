@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 
 export const RootContainer = styled('section')(({ theme }) => ({
   height: 'auto',
-  padding: '3rem 2rem',
+  padding: '3rem 1px',
 
   [theme.breakpoints.down('sm')]: {
     padding: '2rem 0rem',
@@ -10,9 +10,9 @@ export const RootContainer = styled('section')(({ theme }) => ({
 }));
 
 export const Wrapper = styled('div')(({ theme }) => ({
-  width: '60%',
+  width: '80%',
   margin: '0px auto',
-  textAlign: 'center',
+  textAlign: 'left',
 
   [theme.breakpoints.down('lg')]: {
     width: '90%',
@@ -36,6 +36,12 @@ export const Wrapper = styled('div')(({ theme }) => ({
 
     [theme.breakpoints.down('sm')]: {
       fontSize: '2rem',
+    },
+  },
+  '& .MuiTypography-subtitle1': {
+    width: '70%',
+    [theme.breakpoints.down('md')]: {
+       width: '100%',
     },
   },
 }));

@@ -1,16 +1,19 @@
 "use client"
 
-import Image from 'next/image'
+import Link from 'next/link'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
-import Typography from "@mui/material/Typography"
+import Typography from '@mui/material/Typography'
+import Avatar from '@mui/material/Avatar'
+import IconButton from '@mui/material/IconButton'
+import Stack from '@mui/material/Stack'
 import { motion } from 'framer-motion'
 import useAnimate from '@/hooks/useAnimate'
-import { 
-  RootContainer, 
-  Wrapper, 
-  AboutImage 
+import {
+  RootContainer,
+  Wrapper,
 } from '@/components/About/styled.about'
+import { PROFILE_LINK } from '@/constant/profile-link'
 
 const About = () => {
   const { ref, controls, variants, transition } = useAnimate();
@@ -18,18 +21,12 @@ const About = () => {
   return (
     <RootContainer id="about" ref={ref}>
       <Wrapper>
-        <Typography variant="h4" gutterBottom
-          component={motion.h4}
-          variants={variants}
-          initial="hidden"
-          animate={controls}
-          transition={transition}
+        <Grid
+          container
+          spacing={3}
+          alignItems={"center"}
         >
-          <span style={{ color: 'var(--primary-base-color)' }}>01.</span> About Me
-        </Typography>
-
-        <Grid container spacing={6}>
-          <Grid item lg={8} md={7} sm={12} xs={12}
+          <Grid item lg={7} sm={12} xs={12}
             component={motion.div}
             variants={variants}
             initial="hidden"
@@ -37,55 +34,29 @@ const About = () => {
             transition={transition}
             whileInView={{ opacity: 1 }}
           >
-            <Box>
-              <Typography variant="subtitle1">
-                Justice, a <span style={{ color: 'var(--primary-base-color)' }}>multi-disciplinary</span> Software Engineer&nbsp;
-                based in Lagos, Nigeria, is passionate about&nbsp;
-                creating web and mobile applications. By day, he&nbsp;
-                delves into various <span style={{ color: 'var(--primary-base-color)' }}>technical challenges</span>, while&nbsp;
-                at night, he transforms into a technical writer, and also share's his knowledge on <span style={{ color: 'var(--primary-base-color)' }}>YouTube.</span>
-              </Typography>
-              <Typography variant="subtitle1">
-                Justice is deeply involved in the tech community and&nbsp;
-                loves <span style={{ color: 'var(--primary-base-color)' }}>open-source projects.</span> His expertise lies in&nbsp;
-                building interactive and responsive apps, creating optimized <span style={{ color: 'var(--primary-base-color)' }}>RESTFUL API's</span> and prioritizing&nbsp;
-                accessibility for both web and mobile platforms.
-              </Typography>
-              <Typography variant="subtitle1">
-                He embraces a <span style={{ color: 'var(--primary-base-color)' }}>mobile-first</span> approach and focuses on&nbsp;
-                optimizing offline user experiences. When he's not&nbsp;
-                coding or learning, Justice enjoys playing console&nbsp;
-                games and listening to music.
-              </Typography>
-            </Box>
+            <Stack
+              spacing={{ xs: 2, sm: 3 }}
+              direction="row"
+              alignItems="center"
+              useFlexGap
+              sx={{ flexWrap: "wrap" }}
+            >
+              <Avatar
+                alt="Justice Chimobi"
+                src="/about-img.jpg"
+                sx={{ width: 100, height: 100 }}
+              />
 
-            <Box>
-              <Typography variant="subtitle1">
-                Here are a <span style={{ color: 'var(--primary-base-color)' }}>few technologies</span> I’ve been <span style={{ color: '#00f900' }}>working</span> with recently:</Typography>
-              <Grid container spacing={4}>
-                <Grid item md={4}>
-                  <Typography variant="subtitle2">Reactjs</Typography>
-                  <Typography variant="subtitle2">TypeScript</Typography>
-                  <Typography variant="subtitle2">Nextjs</Typography>
-                  <Typography variant="subtitle2">Chakra UI</Typography>
-                  <Typography variant="subtitle2">MUI</Typography>
-                  <Typography variant="subtitle2">Ant Design</Typography>
-                  <Typography variant="subtitle2">React Query</Typography>
-                </Grid>
-
-                <Grid item md={4}>
-                  <Typography variant="subtitle2">Redux</Typography>
-                  <Typography variant="subtitle2">TailwindCss</Typography>
-                  <Typography variant="subtitle2">styled-component</Typography>
-                  <Typography variant="subtitle2">Laravel</Typography>
-                  <Typography variant="subtitle2">PHP</Typography>
-                  <Typography variant="subtitle2">My SQL</Typography>
-                </Grid>
-              </Grid>
-            </Box>
+              <Typography variant="h1">I design and</Typography>
+            </Stack>
+            <Typography variant="h1" style={{ color: 'var(--primary-base-color)' }}>build things for the web.</Typography>
           </Grid>
 
-          <Grid item lg={4} md={5} sm={12} xs={12}
+          <Grid
+            item
+            lg={5}
+            sm={12}
+            xs={12}
             component={motion.div}
             variants={variants}
             initial="hidden"
@@ -93,17 +64,48 @@ const About = () => {
             transition={transition}
             whileInView={{ opacity: 1 }}
           >
-            <AboutImage>
-              <Image
-                src="/about-img.jpg"
-                width={280}
-                height={240}
-                alt="my photo"
-                quality={100}
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=="
-              />
-            </AboutImage>
+            <Box>
+              <Typography variant="h4">
+                An engineer with a strong design background, specializing in building
+                digital systems, accessibility and interface design for digital products
+              </Typography>
+
+              <Box mt={"15px"}>
+                <Grid container spacing={2} alignItems={"center"}>
+                  {PROFILE_LINK.map((link, index) => (
+                    <Grid
+                      item
+                      lg={6}
+                      sm={6}
+                      xs={6}
+                      component={motion.div}
+                      variants={variants}
+                      initial="hidden"
+                      animate={controls}
+                      transition={transition}
+                      whileInView={{ opacity: 1 }}
+                    >
+                      <Box component="span" pr={1} key={index}>
+                        <Link href={link.link}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <IconButton>
+                            {link.icon}
+                          </IconButton>
+                          <Box
+                            component="span"
+                            sx={{ textDecoration: "underline" }}
+                          >
+                            {link.name}
+                          </Box>
+                        </Link>
+                      </Box>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            </Box>
           </Grid>
         </Grid>
       </Wrapper>

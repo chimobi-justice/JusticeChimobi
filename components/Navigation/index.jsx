@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
@@ -10,13 +9,14 @@ import Stack from '@mui/material/Stack'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import { Avatar } from '@mui/material'
 import { NAVMENU } from '@/constant/menu'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import { useTheme } from '@mui/system'
-import { 
-  DrawerContainer, 
-  DrawerClose, 
-  DrawerBox 
+import { Box, useTheme } from '@mui/system'
+import {
+  DrawerContainer,
+  DrawerClose,
+  DrawerBox
 } from '@/components/Navigation/styled.navigation'
 
 const NavBar = () => {
@@ -29,20 +29,20 @@ const NavBar = () => {
   }
 
   return (
-    <AppBar position="sticky" style={{ background: '#0a1931' }}>
+    <AppBar position="sticky" style={{ background: '#0a1931' }} sx={{ padding: "10px" }}>
       {isMatch ? (
         <>
           <Toolbar>
-            <Typography sx={{ flexGrow: 1 }}>
-              <Link href="/">
-                <Image
-                  src="/jc.png"
-                  height={75}
-                  width={70}
-                  alt="logo"
-                />
-              </Link>
-            </Typography>
+            <Link href="/">
+              <Avatar
+                alt="Justice Chimobi"
+                src="/about-img.jpg"
+                sx={{ width: 46, height: 46 }}
+              />
+            </Link>
+
+            <Box sx={{ flexGrow: 1 }} />
+
             <Stack direction="row" justifyContent="center" alignItems="end" spacing={3}>
               <IconButton onClick={toggleDrawer}>
                 <MenuIcon fontSize="large" style={{ color: 'var(--primary-base-color)' }} />
@@ -61,7 +61,7 @@ const NavBar = () => {
               <DrawerBox>
                 {NAVMENU.map((menu) => (
                   <Link key={menu.name} href={menu.path}>
-                    <Typography variant="h4"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.number}</span></Typography>
+                    <Typography variant="h4"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.icon}</span></Typography>
                     <Typography variant="h4" pb={3}>{menu.name}</Typography>
                   </Link>
                 ))}
@@ -72,23 +72,25 @@ const NavBar = () => {
         // end mobile navBar
       ) : (
         // desktop navBar
-        <Toolbar>
-          <Typography sx={{ flexGrow: 1 }}>
-            <Link href="/">
-              <Image
-                src="/jc.png"
-                height={75}
-                width={70}
-                alt="logo"
-              />
-            </Link>
-          </Typography>
+        <Toolbar sx={{ width: "80%", margin: "0px auto" }}>
+          <Link href="/">
+            <Avatar
+              alt="Justice Chimobi"
+              src="/about-img.jpg"
+              sx={{ width: 56, height: 56 }}
+            />
+          </Link>
+
+          <Box sx={{ flexGrow: 1 }} />
+
           <Stack direction="row" justifyContent="center" alignItems="end" spacing={3}>
             {NAVMENU.map((menu) => (
               <Link key={menu.name} href={menu.path}>
-                <Typography variant="subtitle2"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.number}</span> {menu.name}</Typography>
+                <Typography variant="subtitle2"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.i}</span> {menu.name}</Typography>
               </Link>
             ))}
+
+
           </Stack>
         </Toolbar>
         // end desktop navBar
