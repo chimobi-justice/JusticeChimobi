@@ -1,9 +1,9 @@
-import { styled } from '@mui/system';
+import { styled } from '@mui/system'
 
-export const RootContainer = styled('section')(() => ({
+export const RootContainer = styled('section')({
   height: 'auto',
-  padding: '2rem 1rem'
-}));
+  padding: '2rem 1rem',
+});
 
 export const Wrapper = styled('div')(({ theme }) => ({
   width: '80%',

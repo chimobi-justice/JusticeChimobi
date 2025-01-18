@@ -12,28 +12,27 @@ export const Wrapper = styled('div')(({ theme }) => ({
   width: '80%',
   margin: '2rem auto',
   [theme.breakpoints.down('sm')]: {
-    width: '100%',
+    width: '90%',
   },
-  '& .MuiTypography-h4': {
-    textAlign: 'left',
-    marginBottom: '.5em',
-    padding: '12px',
-    fontWeight: 500,
+  '& .MuiTypography-h3': {
+    fontSize: '2.5rem',
+    fontWeight: '900',
+    color: 'lightgray',
+    margin: '.1em 0px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.7rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2rem',
+    },
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.7rem',
+      fontSize: '1.6rem',
     },
   },
   '& .MuiGrid-item': {
     marginBottom: '1em',
     '& .container': {
       padding: '1em',
-      transition: 'transform .5s',
-      '&:hover': {
-        background: '#121214',
-        borderRadius: '10px',
-        cursor: 'pointer',
-        transform: 'scale(1.01)',
-      },
     },
   },
   '& .MuiSvgIcon-root': {
@@ -43,7 +42,29 @@ export const Wrapper = styled('div')(({ theme }) => ({
 
 export const Content = styled('div')(() => ({
   textAlign: 'left',
-  width: '90%',
+  width: '100%',
   margin: 'auto',
   overflow: 'hidden',
+}));
+
+
+export const ProjectImage = styled('div')(({ theme }) => ({
+  position: 'relative',
+  display: 'block',
+  overflow: 'hidden',
+  width: 500,
+  height: 300,
+  [theme.breakpoints.down('md')]: {
+    height: 400,
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
+    height: 270,
+  },
+  borderRadius: '8px',
+  '& img': {
+    width: '100%',
+    height: '100%',
+    borderRadius: '8px',
+  },
 }));
