@@ -27,7 +27,7 @@ const Project = () => {
         <Typography
           variant="h3"
           gutterBottom
-          component={motion.h2}
+          component={motion.h3}
           variants={variants}
           initial="hidden"
           animate={controls}
