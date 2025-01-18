@@ -86,7 +86,7 @@ const NavBar = () => {
           <Stack direction="row" justifyContent="center" alignItems="end" spacing={3}>
             {NAVMENU.map((menu) => (
               <Link key={menu.name} href={menu.path}>
-                <Typography variant="subtitle2"><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.i}</span> {menu.name}</Typography>
+                <Typography variant="subtitle2" alignItems="center" display={"flex"} gap={1}><span style={{ marginRight: "2px", color: 'var(--primary-base-color)' }}>{menu.icon}</span> {menu.name}</Typography>
               </Link>
             ))}
 
