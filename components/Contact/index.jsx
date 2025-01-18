@@ -27,7 +27,7 @@ const Contact = () => {
           p={2}
         >
           <Typography variant="body1" pb={2}>
-            <span style={{ color: 'var(--primary-base-color)' }}>03. What's next say hi👋</span>
+            <span style={{ color: 'var(--primary-base-color)' }}>What's next say hi👋</span>
           </Typography>
           <Typography variant="h2">
             Get In Touch

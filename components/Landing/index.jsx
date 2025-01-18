@@ -1,19 +1,21 @@
 import {
-    About,
-    Contact,
-    HeroSection,
-    Project
-  } from "@/components";
-  
-  const Landing = () => {
-    return (
-      <>
-        <HeroSection />
-        <About />
-        <Project />
-        <Contact />
-      </>
-    )
-  }
-  
-  export default Landing;
+  About,
+  Contact,
+  HeroSection,
+  Project,
+  Skills
+} from "@/components"
+
+const Landing = () => {
+  return (
+    <>
+      <HeroSection />
+      <About />
+      <Project />
+      <Skills />
+      <Contact />
+    </>
+  )
+}
+
+export default Landing;

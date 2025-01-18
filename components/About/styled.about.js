@@ -11,32 +11,36 @@ export const Wrapper = styled('div')(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     width: '100%',
   },
-}));
 
-export const AboutImage = styled('div')(({ theme }) => ({
-  position: 'relative',
-  display: 'block',
-  overflow: 'hidden',
-  width: 380,
-  height: 450,
-  [theme.breakpoints.down('md')]: {
-    height: 400,
+  '& .MuiTypography-h1': {
+    fontSize: '3.7rem',
+    fontWeight: '900',
+    color: 'lightgray',
+    margin: '.4em 0px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.7rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.2rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.1rem',
+    },
   },
-  [theme.breakpoints.down('sm')]: {
-    width: '100%',
-  },
-  borderRadius: '8px',
-  '&:hover img': {
-    filter: 'none',
-    transform: 'translate(-4px, -4px)',
-    boxShadow: '3px 3px 10px green',
-    borderRadius: '8px',
-  },
-  '& img': {
-    width: '100%',
-    height: '100%',
-    filter: 'grayscale(100%)',
-    transition: 'filter 0.3s ease',
-    borderRadius: '8px',
+  '& .MuiTypography-h4': {
+    fontSize: '1.7rem',
+    fontWeight: '400',
+    color: 'lightgray',
+    lineHeight: "1.7em",
+    margin: '.1em 0px',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.7rem',
+    },
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.8rem',
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+    },
   },
 }));

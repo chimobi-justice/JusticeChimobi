@@ -2,16 +2,21 @@ export const NAVMENU = [
     {
       name: 'About',
       path: '#about',
-      number: '01.'
+      icon: '01.'
     },
     {
       name: 'Projects',
       path: '#projects',
-      number: '02.'
+      icon: '02.'
+    },
+    {
+      name: 'Skills',
+      path: '#skills',
+      icon: '03.'
     },
     {
       name: 'Contact',
       path: '#contact',
-      number: '03.'
+      icon: '04.'
     },
   ];
