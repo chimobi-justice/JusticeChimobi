@@ -1,9 +1,16 @@
 export const PROJECT_SOURCE = [
   {
+    dest: '/retailloop.png',
+    title: 'Retaillop',
+    desc: `AI powered Commerce Platform for Enterprise in Global Markets`,
+    tools: `Tools used: ReactJs, Redux, Redux Toolkit, Redux Saga, Chakra UI`,
+    github: '#',
+    website: 'https://app.retailloop.co/',
+  },
+  {
     dest: '/learn-hub.png',
     title: 'Learn Hub',
-    desc: `A portal for problem solving, knowledge sharing and 
-      community builders, join others for sharing knowledge`,
+    desc: `An online content creation and publishing platform.`,
     tools: `Tools used: ReactJs, TypeScript, React-Query, Chakra UI`,
     github: 'https://github.com/chimobi-justice/learn-hub',
     website: 'https://learn-hub-rosy.vercel.app/',
@@ -35,34 +42,5 @@ export const PROJECT_SOURCE = [
     tools: `Tools used: ReactJs, Bootsrap, Saas`,
     github: 'https://github.com/chimobi-justice/bluesea',
     website: 'https://bluesea-pi.vercel.app/',
-  },
-  {
-    dest: '/estudy-backend.png',
-    title: 'Estudy backend api',
-    desc: `Backend API for a comprehensive e-learning platform, providing
-      features such as user authentication, rate limiting, and course management.
-      JWT authentication and integrated Swagger for comprehensive API
-      documentation.`,
-    tools: `Tools used: Laravel, Cloudinary, Swagger`,
-    github: 'https://github.com/chimobi-justice/estudy-web-backend',
-    website: 'https://estudy-backend.onrender.com/api/docs',
-  },
-  {
-    dest: '/stack-dashboard.png',
-    title: 'stack dashboard (Work In Progress)',
-    desc: `An all-in-one cooperative web app that minimize the
-        risk and help users easily save and restore deleted contacts`,
-    tools: `Tools used: ReactJs, Typescript, Ant Design, Styled-component, Firebase`,
-    github: 'https://github.com/chimobi-justice/stack-dashboard',
-    website: 'https://stack-dashboard-wheat.vercel.app/',
-  },
-  {
-    dest: '/driggen.png',
-    title: 'Driggen Learn',
-    desc: `An eLearning platform to choose learning courses from
-        different categories in TECH `,
-    tools: `Tools used: Laravel, blade, Postgres, Tailwind Css`,
-    github: 'https://github.com/chimobi-justice/Driggen-learn',
-    website: '#',
   },
 ];
