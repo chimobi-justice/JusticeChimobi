@@ -44,7 +44,10 @@ const About = () => {
               <Avatar
                 alt="Justice Chimobi"
                 src="/about-img.jpg"
-                sx={{ width: 100, height: 100 }}
+                sx={{
+                  width: { xs: 60, sm: 80, md: 100 },
+                  height: { xs: 60, sm: 80, md: 100 },
+                }}
               />
 
               <Typography variant="h1">I design and</Typography>

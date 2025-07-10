@@ -1,15 +1,15 @@
-import { Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import { ThemeProvider } from '@mui/material/styles'
 import theme from '@/themes'
 import '@/styles/globals.css'
-import { Footer, NavBar } from '@/components'
+import { Footer, NavBar, ProgressBar } from '@/components'
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap"
-});
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Justice Chimobi",
@@ -25,9 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={inter.className}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
+            <ProgressBar />
             <NavBar />
             {children}
             <Footer />

@@ -1,11 +1,19 @@
 export const PROJECT_SOURCE = [
   {
     dest: '/retailloop.png',
-    title: 'Retaillop',
+    title: 'Retailloop Dashboard',
     desc: `AI powered Commerce Platform for Enterprise in Global Markets`,
     tools: `Tools used: ReactJs, Redux, Redux Toolkit, Redux Saga, Chakra UI`,
     github: '#',
     website: 'https://app.retailloop.co/',
+  },
+  {
+    dest: '/retailloop_landing.png',
+    title: 'Retailloop Landing page',
+    desc: `AI powered Commerce Platform for Enterprise in Global Markets`,
+    tools: `Tools used: ReactJs, Chakra UI, Framer Motion`,
+    github: '#',
+    website: 'https://www.retailloop.co/',
   },
   {
     dest: '/learn-hub.png',
