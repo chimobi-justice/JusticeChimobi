@@ -72,7 +72,7 @@ const NavBar = () => {
         // end mobile navBar
       ) : (
         // desktop navBar
-        <Toolbar sx={{ width: "90%", margin: "0px auto" }}>
+        <Toolbar sx={{ width: "85%", margin: "0px auto" }}>
           <Link href="/">
             <Avatar
               alt="Justice Chimobi"

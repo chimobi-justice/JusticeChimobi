@@ -34,15 +34,6 @@ export const PROJECT_SOURCE = [
     website: 'https://estudy-self.vercel.app/',
   },
   {
-    dest: '/recruit.png',
-    title: 'Recruit',
-    desc: `Recruit is a job application which give users all they 
-      need from the job market`,
-    tools: `Tools used: ReactJs, TypeScript, React-Query, TailwindCss, Ant-Design`,
-    github: 'https://github.com/chimobi-justice/recruit',
-    website: 'https://recruit-eight-xi.vercel.app/',
-  },
-  {
     dest: '/bluesea.png',
     title: 'Bluesea Investment Limited',
     desc: `Bluesea Investment Limited is a contruction company focused in
@@ -50,5 +41,18 @@ export const PROJECT_SOURCE = [
     tools: `Tools used: ReactJs, Bootsrap, Saas`,
     github: 'https://github.com/chimobi-justice/bluesea',
     website: 'https://bluesea-pi.vercel.app/',
+  },
+];
+
+
+export const PUBLISH_PACKAGES_SOURCE = [
+  {
+    dest: '/num.png',
+    title: 'Num Format Utils',
+    desc: `A lightweight utility library for formatting numbers, currencies, 
+    percentages, and decimals — with full TypeScript support and locale-aware 
+    formatting via the Intl API.`,
+    github: 'https://github.com/chimobi-justice/num-format-utils',
+    NPM: 'https://www.npmjs.com/package/num-format-utils',
   },
 ];
