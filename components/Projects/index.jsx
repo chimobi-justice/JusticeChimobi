@@ -235,33 +235,6 @@ const Project = () => {
                     </Grid>
                   </Content>
                 </Grid>
-
-                <Grid
-                  item
-                  lg={6}
-                  md={6}
-                  sm={10}
-                  xs={12}
-                  component={motion.div}
-                  variant={variants}
-                  variants={variants}
-                  initial="hidden"
-                  animate={controls}
-                  transition={transition}
-                  whileInView={{ opacity: 1 }}
-                >
-                  <ProjectImage>
-                    <Image
-                      src={project.dest}
-                      width={280}
-                      height={240}
-                      alt="my photo"
-                      quality={100}
-                      placeholder="blur"
-                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=="
-                    />
-                  </ProjectImage>
-                </Grid>
               </Fragment>
             ))}
           </Grid>
