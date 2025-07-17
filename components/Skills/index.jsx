@@ -40,9 +40,8 @@ const Skills = () => {
             useFlexGap
             sx={{ flexWrap: "wrap" }}
           >
-            <Typography variant="subtitle2">Reactjs</Typography>
+            <Typography variant="subtitle2">Reactjs / Nextjs</Typography>
             <Typography variant="subtitle2">TypeScript</Typography>
-            <Typography variant="subtitle2">Nextjs</Typography>
             <Typography variant="subtitle2">Chakra UI</Typography>
             <Typography variant="subtitle2">MUI</Typography>
             <Typography variant="subtitle2">Ant Design</Typography>
@@ -53,7 +52,6 @@ const Skills = () => {
             <Typography variant="subtitle2">styled-component</Typography>
             <Typography variant="subtitle2">Laravel</Typography>
             <Typography variant="subtitle2">PHP</Typography>
-            <Typography variant="subtitle2">My SQL</Typography>
           </Stack>
         </Box>
       </Wrapper>

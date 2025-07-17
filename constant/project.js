@@ -16,6 +16,14 @@ export const PROJECT_SOURCE = [
     website: 'https://www.retailloop.co/',
   },
   {
+    dest: '/leahai.png',
+    title: 'Leah Ai',
+    desc: `AI platform that automates your business operations, providing real-time analytical insights enabling you to run more sustainably and profitably`,
+    tools: `Tools used: ReactJs, TypeScript, React-Query, Chakra UI`,
+    github: '#',
+    website: 'https://leahai.co/',
+  },
+  {
     dest: '/learn-hub.png',
     title: 'Learn Hub',
     desc: `An online content creation and publishing platform.`,
